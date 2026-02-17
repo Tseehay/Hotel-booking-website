@@ -290,7 +290,7 @@ CREATE TABLE `team_details` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 ```
 
-#### 13. User Queries Table
+#### 14. User Queries Table
 ```sql
 CREATE TABLE `user_queries` (
   `sr_no` int(11) NOT NULL AUTO_INCREMENT,
