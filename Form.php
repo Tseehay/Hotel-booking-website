@@ -60,7 +60,7 @@ define('UPLOAD_DIR', 'uploads/');
 
 // Ensure upload directory exists and is writable
 if (!is_dir(UPLOAD_DIR)) {
-    mkdir(UPLOAD_DIR, 0755, true);
+    mkdir(UPLOAD_DIR, 0750, true);
 }
 
 if (!is_writable(UPLOAD_DIR)) {
