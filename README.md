@@ -25,9 +25,9 @@ Welcome to Addis Hotel, the ultimate hotel booking platform designed to simplify
 1. [Faiza Mohammed](https://github.com/72730882)
 2. [Rediet Muluken](https://github.com/redu95)
 3. [Fenet Damena](https://github.com/Fenet-damena)
-4. Gelila Mihirke(https://github.com/Gelilamihirke)
+4. [Gelila Mihirke](https://github.com/Gelilamihirke)
 5. [Tsehay Goremes](https://github.com/tseehay)
-6. Betel B/Meskel (https://github.com/Betel-B)
+6. [Betel B/Meskel](https://github.com/Betel-B)
 
 ## Technologies Used
 - HTML
@@ -61,7 +61,7 @@ Welcome to Addis Hotel, the ultimate hotel booking platform designed to simplify
 This project is licensed under the [MIT License](LICENSE).
 
 ## Acknowledgements
-We would like to thank everyone who contributed to the development of EasyStay and provided valuable feedback during the project.
+We would like to thank everyone who contributed to the development of Addis Hotel and provided valuable feedback during the project.
 
 ## Contact
 If you have any questions or concerns regarding the project, feel free to reach out to any of the group members listed above.
