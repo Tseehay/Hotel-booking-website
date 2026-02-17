@@ -37,11 +37,23 @@ $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
 // File upload path with validation
 $targetDir = "uploads/";
-$targetFilePath = $targetDir . basename($profile);
 
 // Validate file upload
 if (!empty($_FILES["profile"]["name"])) {
-    $fileType = strtolower(pathinfo($targetFilePath, PATHINFO_EXTENSION));
+    // Check for upload errors
+    if ($_FILES["profile"]["error"] !== UPLOAD_ERR_OK) {
+        echo "<script>alert('File upload error'); window.location.href='index.php';</script>";
+        exit();
+    }
+    
+    // Check file size (limit to 5MB)
+    if ($_FILES["profile"]["size"] > 5242880) {
+        echo "<script>alert('File size must be less than 5MB'); window.location.href='index.php';</script>";
+        exit();
+    }
+    
+    // Validate file type by extension
+    $fileType = strtolower(pathinfo($_FILES["profile"]["name"], PATHINFO_EXTENSION));
     $allowedTypes = array('jpg', 'jpeg', 'png', 'gif');
     
     if (!in_array($fileType, $allowedTypes)) {
@@ -49,7 +61,31 @@ if (!empty($_FILES["profile"]["name"])) {
         exit();
     }
     
-    move_uploaded_file($_FILES["profile"]["tmp_name"], $targetFilePath);
+    // Validate actual MIME type
+    $finfo = finfo_open(FILEINFO_MIME_TYPE);
+    $mimeType = finfo_file($finfo, $_FILES["profile"]["tmp_name"]);
+    finfo_close($finfo);
+    
+    $allowedMimeTypes = array('image/jpeg', 'image/png', 'image/gif');
+    if (!in_array($mimeType, $allowedMimeTypes)) {
+        echo "<script>alert('Invalid file type'); window.location.href='index.php';</script>";
+        exit();
+    }
+    
+    // Generate a unique, safe filename
+    $uniqueFilename = uniqid('profile_', true) . '.' . $fileType;
+    $targetFilePath = $targetDir . $uniqueFilename;
+    
+    // Attempt to move the uploaded file
+    if (!move_uploaded_file($_FILES["profile"]["tmp_name"], $targetFilePath)) {
+        echo "<script>alert('Failed to upload file'); window.location.href='index.php';</script>";
+        exit();
+    }
+    
+    $profile = $uniqueFilename;
+} else {
+    // No profile picture uploaded
+    $profile = '';
 }
 
 // Prepare SQL statement (store only hashed password)
@@ -62,7 +98,7 @@ if ($stmt->execute()) {
     $_SESSION['user'] = [
         'name' => $name,
         'email' => $email,
-        'profile' => $targetFilePath
+        'profile' => !empty($profile) ? 'uploads/' . $profile : ''
     ];
     echo "<script>alert('Registered successfully');</script>";
     header("Location: index.php");
