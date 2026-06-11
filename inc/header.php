@@ -11,6 +11,8 @@ require('admin/inc/db_config.php');
 require('admin/inc/essentials.php');
 
 // Check if user is logged in
+$userName = '';
+$userProfile = '';
 if (isset($_SESSION['user'])) {
     // User is logged in
     $userName = $_SESSION['user']['name'];
@@ -28,7 +30,7 @@ $contact_r = mysqli_fetch_assoc(select($contact_q, $value, 'i'));
 
 <nav id="nav_bar" class="navbar navbar-expand-lg navbar-light bg-white px-lg-3 py-lg-2 shadow-sm sticky-top">
     <div class="container-fluid">
-        <a class="navbar-brand me-5 fw-bold fs-3 h-font" href="index.php">Addis Hotel</a>
+        <a class="navbar-brand me-5 fw-bold fs-3 h-font" href="index.php">Hawassa Tourism & Hotel Booking</a>
         <button class="navbar-toggler shadow-none navbar-light bg-white" type="button" data-toggle="collapse"
             data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
             aria-label="Toggle navigation">
@@ -84,9 +86,9 @@ $contact_r = mysqli_fetch_assoc(select($contact_q, $value, 'i'));
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body text-center">
-                <img src="<?php echo $_SESSION['user']['profile']; ?>" alt="Profile Picture"
+                <img src="<?php echo $userProfile ?? ''; ?>" alt="Profile Picture"
                     class="rounded-circle mb-3" style="width: 100px; height: 100px;">
-                <h5><?php echo $_SESSION['user']['name']; ?></h5>
+                <h5><?php echo $userName ?? 'Guest'; ?></h5>
             </div>
             <div class="modal-footer">
                 <button type="button" onclick="redirectToLogout()" class="btn btn-dark" id="logoutButton">Logout</button>
@@ -157,11 +159,11 @@ $contact_r = mysqli_fetch_assoc(select($contact_q, $value, 'i'));
                             </div>
                             <div class="col-md-6 pe-0 mb-3">
                                 <label class="form-label">Phone Number</label>
-                                <input name="phonenum" type="tel" class="form-control shadow-none" required>
+                                <input name="phonenum" type="tel" pattern="^(\+251|0)9[0-9]{8}$" title="Enter Ethiopian phone number: +251 or 0, then 9 followed by 8 more digits" class="form-control shadow-none" required>
                             </div>
                             <div class="col-md-6 ps-0 mb-3">
-                                <label class="form-label">Pincode</label>
-                                <input name="pincode" type="number" class="form-control shadow-none" required>
+                                <label class="form-label">Postal Code (4 digits)</label>
+                                <input name="pincode" type="tel" pattern="^[0-9]{4}$" title="Enter 4-digit pincode" class="form-control shadow-none" required>
                             </div>
                             <div class="col-md-6 pe-0 mb-3">
                                 <label class="form-label">Date of Birth</label>
@@ -169,7 +171,7 @@ $contact_r = mysqli_fetch_assoc(select($contact_q, $value, 'i'));
                             </div>
                             <div class="col-md-6 ps-0 mb-3">
                                 <label class="form-label">Password</label>
-                                <input name="pass" type="password" class="form-control shadow-none" required>
+                                <input name="pass" type="password" minlength="8" title="Password must be at least 8 characters long" class="form-control shadow-none" required>
                             </div>
                             <div class="col-md-6 ps-0 mb-3">
                                 <label class="form-label">Profile Picture</label>
@@ -178,7 +180,7 @@ $contact_r = mysqli_fetch_assoc(select($contact_q, $value, 'i'));
                             </div>
                             <div class="col-md-6 ps-0 mb-3">
                                 <label class="form-label">Confirm Password</label>
-                                <input name="cpass" type="password" class="form-control shadow-none" required>
+                                <input name="cpass" type="password" minlength="8" title="Password must be at least 8 characters long" class="form-control shadow-none" required>
                             </div>
                         </div>
                     </div>
@@ -194,9 +196,12 @@ $contact_r = mysqli_fetch_assoc(select($contact_q, $value, 'i'));
 <script>
 document.addEventListener('DOMContentLoaded', function () {
     // Handle profile picture click
-    document.querySelector('#profilePic img').addEventListener('click', function () {
-        $('#profileModal').modal('show');
-    });
+    const profileImage = document.querySelector('#profilePic img');
+    if (profileImage) {
+        profileImage.addEventListener('click', function () {
+            $('#profileModal').modal('show');
+        });
+    }
 
     // Handle form submission via AJAX
     document.querySelector('#loginForm').addEventListener('submit', function (event) {
@@ -212,7 +217,6 @@ document.addEventListener('DOMContentLoaded', function () {
         })
         .then(response => response.json())
         .then(data => {
-            console.log('Login response:', data); // Log the response for debugging
             if (data.success) {
                 // Login successful, hide modals
                 $('#loginModal').modal('hide');
@@ -220,26 +224,14 @@ document.addEventListener('DOMContentLoaded', function () {
                 // Reload the page to update UI
                 location.reload();
             } else {
-                // Display error message if needed
-                alert(data.message); // Replace with appropriate error handling
+                alert(data.message || 'Invalid login credentials.');
             }
         })
         .catch(error => {
             console.error('Login error:', error);
-            // Display error message if AJAX request fails
-            alert('An error occurred. Please try again.'); // Replace with appropriate error handling
+            alert('An error occurred. Please try again.');
         });
     });
 
-
-    // Check if user is logged in and adjust UI
-    <?php if ($isLoggedIn): ?>
-        document.querySelector('#loginButton').style.display = 'none';
-        document.querySelector('#registerButton').style.display = 'none';
-        document.querySelector('#profilePic').classList.remove('d-none');
-    <?php endif; ?>
 });
 </script>
-
-
-

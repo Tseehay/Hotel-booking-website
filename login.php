@@ -3,47 +3,41 @@ session_start();
 require('admin/inc/db_config.php');
 require('admin/inc/essentials.php');
 
-// Database connection details (replace with your own)
-$servername = "localhost";
-$username = "root";
-$password = "";
-$database = "hotel-booking-website";
+header('Content-Type: application/json');
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $database);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+if (!isset($_POST['email'], $_POST['password'])) {
+    echo json_encode(['success' => false, 'message' => 'Email and password are required.']);
+    exit();
 }
 
-// Get login credentials
-$email = $_POST['email'];
+$email = trim($_POST['email']);
 $password = $_POST['password'];
 
-// Prepare SQL statement to fetch user data
-$stmt = $conn->prepare("SELECT * FROM user_cred WHERE email = ? AND password = ?");
-$stmt->bind_param("ss", $email, $password);
+$stmt = $con->prepare("SELECT `id`, `name`, `email`, `profile`, `password` FROM `user_cred` WHERE `email` = ? LIMIT 1");
+
+if (!$stmt) {
+    echo json_encode(['success' => false, 'message' => 'Unable to process login request.']);
+    exit();
+}
+
+$stmt->bind_param("s", $email);
 $stmt->execute();
 $result = $stmt->get_result();
 
-if ($result->num_rows > 0) {
+if ($result && $result->num_rows === 1) {
     $user = $result->fetch_assoc();
-    // Store user information in the session
-    $_SESSION['user'] = [
-        'name' => $user['name'],
-        'email' => $user['email'],
-        'profile' => 'uploads/' . $user['profile']
-    ];
-
-    echo json_encode(['success' => true]);
-    header("Location: index.php");
-    exit();
-} else {
-    echo json_encode(['success' => false, 'message' => 'Invalid login credentials']);
+    if (password_verify($password, $user['password'])) {
+        $_SESSION['user'] = [
+            'name' => $user['name'],
+            'email' => $user['email'],
+            'profile' => !empty($user['profile']) ? 'uploads/' . $user['profile'] : ''
+        ];
+        echo json_encode(['success' => true, 'message' => 'Login successful.']);
+        $stmt->close();
+        exit();
+    }
 }
 
-// Close the statement and connection
+echo json_encode(['success' => false, 'message' => 'Invalid login credentials.']);
 $stmt->close();
-$conn->close();
 ?>

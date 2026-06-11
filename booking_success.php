@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Booking Success - Addis Hotel</title>
+    <title>Booking Success - Hawassa Tourism & Hotel Booking</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/common.css">
 </head>
@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <div class="card border-0 shadow-sm">
             <div class="card-body">
                 <h2 class="text-center text-success">Booking Successful!</h2>
-                <p class="text-center">Thank you for booking with Addis Hotel. Your booking details are as follows:</p>
+                <p class="text-center">Thank you for booking with Hawassa Tourism & Hotel Booking. Your booking details are as follows:</p>
                 <div class="row mt-4">
                     <div class="col-md-6 mb-3">
                         <h5>Booking Details</h5>

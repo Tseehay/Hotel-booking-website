@@ -1,6 +1,6 @@
 # Hotel Booking Website - Setup and Run Guide
 
-This comprehensive guide will help you set up and run the Addis Hotel Booking Website project on your local machine.
+This comprehensive guide will help you set up and run the Hawassa Tourism & Hotel Booking Website project on your local machine.
 
 ## Table of Contents
 1. [Prerequisites](#prerequisites)
@@ -37,7 +37,7 @@ Before you begin, ensure you have the following installed on your system:
 
 ## Project Overview
 
-**Addis Hotel** is a full-featured hotel booking website built with PHP and MySQL. The system includes:
+**Hawassa Tourism & Hotel Booking** is a full-featured hotel booking website built with PHP and MySQL. The system includes:
 
 ### User Features
 - User registration and login

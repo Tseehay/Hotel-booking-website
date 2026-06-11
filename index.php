@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE-edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Addis Hotel - Home</title>
+    <title>Hawassa Tourism & Hotel Booking - Home</title>
     <link rel="stylesheet" href="assets/common.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=Poppins:wght@400;500;600&display=swap"
@@ -223,7 +223,7 @@
                             <img src="images/about/fayo.png" width="30px">
                             <h6 class="m-0 ms-2">Faiza</h6>
                         </div>
-                        <p> Addis Hotel is now my go-to choice whenever I visit the city."</p>
+                        <p> Hawassa Tourism & Hotel Booking is now my go-to choice whenever I visit the city."</p>
                         <div class="rating">
                             <i class="bi bi-star-fill text-warning"></i>
                             <i class="bi bi-star-fill text-warning"></i>
@@ -237,7 +237,7 @@
                             <img src="images/about/fenet.jpg" width="30px">
                             <h6 class="m-0 ms-2">Fenet</h6>
                         </div>
-                        <p>As a seasoned traveler, I can confidently say that Addis Hotel is a true gem. The
+                        <p>As a seasoned traveler, I can confidently say that Hawassa Tourism & Hotel Booking is a true gem. The
                             combination of luxurious accommodations, world-class facilities, and impeccable service
                             is unparalleled. </p>
                         <div class="rating">
@@ -253,7 +253,7 @@
                             <img src="images/about/about.png" width="30px">
                             <h6 class="m-0 ms-2">Rediet</h6>
                         </div>
-                        <p>I had the pleasure of hosting a corporate event at Addis Hotel, and I must say, the
+                        <p>I had the pleasure of hosting a corporate event at Hawassa Tourism & Hotel Booking, and I must say, the
                             experience was flawless.</p>
                         <div class="rating">
                             <i class="bi bi-star-fill text-warning"></i>
@@ -268,7 +268,7 @@
                             <img src="images/about/gelil.jpg" width="30px">
                             <h6 class="m-0 ms-2">Gelila</h6>
                         </div>
-                        <p>As a frequent business traveler, I've stayed at many hotels, but Addis Hotel stands out
+                        <p>As a frequent business traveler, I've stayed at many hotels, but Hawassa Tourism & Hotel Booking stands out
                             as the best. The level of service and attention to detail is truly remarkable.</p>
                         <div class="rating">
                             <i class="bi bi-star-fill text-warning"></i>
@@ -283,7 +283,7 @@
                             <img src="images/about/tse.jpg" width="30px">
                             <h6 class="m-0 ms-2">Tsehay</h6>
                         </div>
-                        <p>"My family and I recently stayed at Addis Hotel for a week-long vacation, and it was an
+                        <p>"My family and I recently stayed at Hawassa Tourism & Hotel Booking for a week-long vacation, and it was an
                             absolute delight. The spacious rooms, impressive facilities, and delicious dining
                             options made our trip truly exceptional.</p>
                         <div class="rating">
