@@ -12,11 +12,11 @@ require('admin/inc/essentials.php');
 
 // Check if user is logged in
 $userName = '';
-$userProfile = '';
+$userProfile = 'images/ff.png';
 if (isset($_SESSION['user'])) {
     // User is logged in
     $userName = $_SESSION['user']['name'];
-    $userProfile = $_SESSION['user']['profile'];
+    $userProfile = !empty($_SESSION['user']['profile']) ? $_SESSION['user']['profile'] : 'images/ff.png';
     $isLoggedIn = true;
 } else {
     // User is not logged in
@@ -172,11 +172,6 @@ $contact_r = mysqli_fetch_assoc(select($contact_q, $value, 'i'));
                             <div class="col-md-6 ps-0 mb-3">
                                 <label class="form-label">Password</label>
                                 <input name="pass" type="password" minlength="8" title="Password must be at least 8 characters long" class="form-control shadow-none" required>
-                            </div>
-                            <div class="col-md-6 ps-0 mb-3">
-                                <label class="form-label">Profile Picture</label>
-                                <input name="profile" type="file" accept=".jpg, .png, .jpeg, .webp"
-                                    class="form-control shadow-none" required>
                             </div>
                             <div class="col-md-6 ps-0 mb-3">
                                 <label class="form-label">Confirm Password</label>

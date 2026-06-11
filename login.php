@@ -30,7 +30,7 @@ if ($result && $result->num_rows === 1) {
         $_SESSION['user'] = [
             'name' => $user['name'],
             'email' => $user['email'],
-            'profile' => !empty($user['profile']) ? 'uploads/' . $user['profile'] : ''
+            'profile' => !empty($user['profile']) ? 'uploads/' . $user['profile'] : 'images/ff.png'
         ];
         echo json_encode(['success' => true, 'message' => 'Login successful.']);
         $stmt->close();
