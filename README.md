@@ -44,9 +44,5 @@ A dynamic web application tailored to the Ethiopian context, focused on tourism 
 5. Open the app in your browser.
 
 ## Contributors
-1. [Faiza Mohammed](https://github.com/72730882)
-2. [Rediet Muluken](https://github.com/redu95)
-3. [Fenet Damena](https://github.com/Fenet-damena)
-4. [Gelila Mihirke](https://github.com/Gelilamihirke)
-5. [Tsehay Goremes](https://github.com/tseehay)
-6. [Betel B/Meskel](https://github.com/Betel-B)
+1. [Tsehay Goremes](https://github.com/tseehay)
+
