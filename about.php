@@ -39,13 +39,13 @@ At Hawassa Tourism & Hotel Booking, our success is driven by a team of experienc
     <div class="container">
         <div class="row justify-content-between align-items-center">
             <div class="col-lg-6 col-md-5 mb-4 order-lg-1 order-md-1 order-2">
-                <h3 class="mb-3">Rediet Muluken – General Manager</h3>
+                <h3 class="mb-3">Tsehay Goremes – General Manager</h3>
                 <p>
-                   With over 20 years of experience in the hospitality industry, Rediet Muluken leads our team with a vision for excellence and innovation. His commitment to creating a welcoming and luxurious environment for all guests is reflected in every aspect of our hotel operations. Rediet’s leadership has been instrumental in establishing Hawassa Tourism & Hotel Booking as a premier destination in the Hawassa region.
+                   With over 20 years of experience in the hospitality industry, Tsehay Goremes leads our team with a vision for excellence and innovation. His commitment to creating a welcoming and luxurious environment for all guests is reflected in every aspect of our hotel operations. Tsehay’s leadership has been instrumental in establishing Hawassa Tourism & Hotel Booking as a premier destination in the Hawassa region.
                 </p>
             </div>
             <div class="col lg-5 col-md-5 mb-4 order-lg-2 order-md-2 order-1">
-                <img src="images/about/about.png" class="w-100">
+                <img src="images/about/about1.jpg" class="w-100">
             </div>
         </div>
     </div>
@@ -89,20 +89,20 @@ At Hawassa Tourism & Hotel Booking, our success is driven by a team of experienc
     <div class="swiper mySwiper">
         <div class="swiper-wrapper mb-5">
             <div class="swiper-slide text-center overflow-hidden rounded">
-                <img src="images/about/fenet.jpg" class="w-10">
-                <h1 class="mt-2" style="color: red;">Fenet Demena</h5>
+                <!-- <img src="images/about/fenet.jpg" class="w-10"> -->
+                <h1 class="mt-2" style="color: red;"></h5>
             </div>
             <div class="swiper-slide text-center overflow-hidden rounded">
-                <img src="images/about/fayo.png" class="w-10">
-                <h5 class="mt-2" style="color: red;">Faiza Mohammed</h5>
+                <!-- <img src="images/about/fayo.png" class="w-10"> -->
+                <h5 class="mt-2" style="color: red;"></h5>
             </div>
             <div class="swiper-slide text-center overflow-hidden rounded">
-                <img src="images/about/gelil.jpg" class="w-100">
-                <h5 class="mt-2">Gelila Mihreke</h5>
+                <!-- <img src="images/about/gelil.jpg" class="w-100"> -->
+                <h5 class="mt-2"></h5>
             </div>
             <div class="swiper-slide text-center overflow-hidden rounded">
-                <img src="images/about/tse.jpg" class="w-100">
-                <h5 class="mt-2">Tsehay Gormes</h5>
+                <!-- <img src="images/about/tse.jpg" class="w-100"> -->
+                <h5 class="mt-2"></h5>
             </div>
         </div>
 
