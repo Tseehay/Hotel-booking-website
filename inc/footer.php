@@ -4,7 +4,7 @@
             <div class="col-lg-4 p-4">
                 <h3 class="h-font fw-bold fs-3 mb-2">ADDIS HOTEL</h3>
                 <p class="text">
-                    Welcome to Addis Hotel, a premier destination for travelers seeking a blend of comfort,
+                    Welcome to Hawassa Tourism & Hotel Booking, a premier destination for travelers seeking a blend of comfort,
                     convenience, and exceptional service. Nestled in the vibrant heart of the city.
                 </p>
             </div>
@@ -32,7 +32,7 @@
         </div>
     </div>
 </div>
-    <h6 class="text-center bg-dark text-white p-4 m-0 ">Designed and Developed by Addis Hotel</h6>
+    <h6 class="text-center bg-dark text-white p-4 m-0 ">Designed and Developed by Hawassa Tourism & Hotel Booking</h6>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"></script>
 
 

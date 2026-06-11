@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE-edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Addis Hotel - ABOUT</title>
+    <title>Hawassa Tourism & Hotel Booking - ABOUT</title>
     <link rel="stylesheet" href="assets/common.css">
     <?php require('inc/links.php') ?>
     <style>
@@ -33,7 +33,7 @@
         <h2 class="fw-bold h-font text-center">ABOUT US</h2>
         <div class="h-line bg-dark"></div>
         <p class="text-center mt-3">Dedicated to Excellence in Hospitality<br>
-At Addis Hotel, our success is driven by a team of experienced and passionate professionals<br> dedicated to delivering exceptional service and unforgettable experiences. Meet the people who make it all possible:</p>
+At Hawassa Tourism & Hotel Booking, our success is driven by a team of experienced and passionate professionals<br> dedicated to delivering exceptional service and unforgettable experiences. Meet the people who make it all possible:</p>
     </div>
 
     <div class="container">
@@ -41,7 +41,7 @@ At Addis Hotel, our success is driven by a team of experienced and passionate pr
             <div class="col-lg-6 col-md-5 mb-4 order-lg-1 order-md-1 order-2">
                 <h3 class="mb-3">Rediet Muluken – General Manager</h3>
                 <p>
-                   With over 20 years of experience in the hospitality industry, Rediet Muluken leads our team with a vision for excellence and innovation. His commitment to creating a welcoming and luxurious environment for all guests is reflected in every aspect of our hotel operations. Rediet’s leadership has been instrumental in establishing Addis Hotel as a premier destination in Addis Ababa.
+                   With over 20 years of experience in the hospitality industry, Rediet Muluken leads our team with a vision for excellence and innovation. His commitment to creating a welcoming and luxurious environment for all guests is reflected in every aspect of our hotel operations. Rediet’s leadership has been instrumental in establishing Hawassa Tourism & Hotel Booking as a premier destination in the Hawassa region.
                 </p>
             </div>
             <div class="col lg-5 col-md-5 mb-4 order-lg-2 order-md-2 order-1">

@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE-edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Addis Hotel - ROOM DETAILS</title>
+  <title>Hawassa Tourism & Hotel Booking - ROOM DETAILS</title>
   <link rel="stylesheet" href="assets/common.css">
   <link href=" https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css " rel="stylesheet">
 
@@ -183,7 +183,7 @@
             <img src="images/about/tse.jpg" width="30px">
             <h6 class="m-0 ms-2">Tsehay Goremes</h6>
           </div>
-          <p>As a seasoned traveler, I can confidently say that Addis Hotel Booking is a true gem. The
+          <p>As a seasoned traveler, I can confidently say that Hawassa Tourism & Hotel Booking is a true gem. The
             combination of luxurious accommodations, world-class facilities, and impeccable service
             is unparalleled. </p>
           <i class="rating">

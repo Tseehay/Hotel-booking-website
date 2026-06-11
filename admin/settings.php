@@ -197,7 +197,7 @@ require ('inc/essentials.php');
                             <div class="col-lg-6">
                                 <div class="mb-4">
                                     <h6 class="card-subtitle mb-1 fw-bold">Address</h6>
-                                    <p class="card-text" id="address"> megenaga,Addis Ababa,Ethiopia</p>
+                                    <p class="card-text" id="address"> megenaga,Hawassa,Ethiopia</p>
                                 </div>
                                 <div class="mb-4">
                                     <h6 class="card-subtitle mb-1 fw-bold">Google Map</h6>
