@@ -66,7 +66,6 @@
         data.append('dob',register_form.elements['dob'].value);
         data.append('pass',register_form.elements['pass'].value);
         data.append('cpass',register_form.elements['cpass'].value);
-        data.append('profile',register_form.elements['profile'].files[0]);
         data.append('register','');
 
         var myModal = document.getElementById('registerModal');
